@@ -1,0 +1,19 @@
+services:
+  db:
+    image: mysql:8.0
+    platform: linux/amd64
+    command: 'mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci'
+    container_name: dbcontainer
+    volumes:
+      - ./mysql/db:/var/lib/mysql
+    user: 1000:1000 # ローカル起動時のみ必要
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass
+      - MYSQL_USER=nextuser
+      - MYSQL_PASSWORD=pass
+      - MYSQL_DATABASE=test
+    expose:
+      - 3306
+    ports:
+      - 3006:3306
