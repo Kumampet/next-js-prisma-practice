@@ -4,3 +4,8 @@ export type PostTypes = {
   content: string | null;
   published: boolean;
 }
+
+export type FormSubmitValueTypes = {
+  title: string;
+  content: string;
+}
