@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import _isEmpty from 'lodash/isEmpty';
 import _get from 'lodash/get';
-import { PostTypes } from '../types';
+import { PostTypes } from './types';
 
 const fetchData = async (): Promise<PostTypes[]> => {
   const _axios = axios.create({
