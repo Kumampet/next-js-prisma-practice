@@ -1,9 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
+import { PrismaClient } from '@prisma/client';
+import { PostTypes } from '../../../types';
 
-export function GET(request: NextRequest): NextResponse {
-    // GET /api/posts リクエストの処理
+const prisma = new PrismaClient();
+
+export async function GET(request: NextRequest): Promise<NextResponse<PostTypes[]>> {
+  // GET /api/posts リクエストの処理
+  const data = await prisma.post.findMany();
+  return NextResponse.json(data);
 }
 
-export function POST(request: NextRequest): NextResponse {
-    // POST /api/posts リクエストの処理
+export async function POST(request: NextRequest) {
+  // POST /api/posts リクエストの処理
+  
+  // await prisma.post.create({
+  //   data: {
+  //     title: "aaa",
+  //     content: "aaaa"
+  //   }
+  // });
 }
