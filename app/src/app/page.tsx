@@ -48,6 +48,7 @@ export default function Home() {
           {posts.map((post) => (
             <tr key={post.id}>
               <td>{post.id}</td>
+              <td>{post.title}</td>
               <td>{post.content}</td>
             </tr>
           ))}
