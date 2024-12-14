@@ -1,3 +1,14 @@
+# Prismaを使ったDBデータ操作のれんしう
+
+## 環境構築
+
+1. リポジトリクローン
+2. `/db`ディレクトリで`yarn start`(裏では`docker-compose up -d`が動きます。)
+3. `/app`ディレクトリで`yarn install`
+4. `/app`ディレクトリで`yarn dev`
+
+# Next.js
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
